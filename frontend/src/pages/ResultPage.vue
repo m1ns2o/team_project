@@ -18,7 +18,7 @@
         <tbody>
           <tr v-for="hour in 24" :key="hour">
             <td>{{ hourLabel(hour - 1) }}</td>
-            <td v-for="d in 7" :key="d">
+            <td v-for="d in 2" :key="d">
               <div class="names">
                 <span v-for="n in namesInCell(d - 1, hour - 1)" :key="n" class="cell-name">{{ n }}</span>
               </div>
@@ -34,7 +34,8 @@
 import { defineComponent, ref, onMounted } from 'vue';
 import axios from 'axios';
 
-const days = ['월', '화', '수', '목', '금', '토', '일'];
+// const days = ['월', '화', '수', '목', '금', '토', '일'];
+const days = ['목', '금'];
 
 type SlotMap = Record<string, string[]>; // key: "d-h", value: [name]
 
