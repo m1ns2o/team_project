@@ -16,7 +16,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="hour in 24" :key="hour">
+          <tr v-for="hour in [10,11,12,13,14,15,16,17]" :key="hour">
             <td>{{ hourLabel(hour - 1) }}</td>
             <td v-for="d in 2" :key="d">
               <div class="names">
